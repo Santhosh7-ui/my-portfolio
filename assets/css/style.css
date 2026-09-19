@@ -5,10 +5,10 @@
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.6;
-    color: #333;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    font-family: 'Adobe Clean', 'Segoe UI', Arial, sans-serif;
+    line-height: 1.5;
+    color: #222222;
+    background: #F4F5F6;
 }
 
 .container {
@@ -17,28 +17,27 @@ body {
     padding: 0 20px;
 }
 
-/* Header */
 header {
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(10px);
+    background: #FFFFFF;
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+    border-bottom: 1px solid #E1E1E1;
 }
 
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 0;
+    padding: 0.75rem 0;
 }
 
 .logo {
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: #667eea;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #FA0F00; /* Adobe Red */
+    letter-spacing: 0.5px;
 }
 
 .nav-links {
@@ -55,15 +54,16 @@ nav {
 }
 
 .nav-links a:hover {
-    color: #667eea;
+    color: #1473E6; /* Spectrum Blue */
 }
 
 /* Hero Section */
 .hero {
-    padding: 120px 0 80px;
-    text-align: center;
-    color: white;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 140px 0 80px;
+    text-align: left;
+    color: #222222;
+    background: #FFFFFF;
+    border-bottom: 1px solid #E1E1E1;
 }
 
 .hero-content h1 {
@@ -95,36 +95,35 @@ nav {
 }
 
 .btn {
-    padding: 12px 30px;
-    border: none;
-    border-radius: 50px;
-    font-size: 1rem;
+    padding: 8px 20px;
+    border: 2px solid transparent;
+    border-radius: 16px;
+    font-size: 0.9rem;
     font-weight: 600;
     cursor: pointer;
-    transition: all 0.3s;
+    transition: all 0.2s ease-in-out;
     text-decoration: none;
     display: inline-block;
 }
 
 .btn-primary {
-    background: white;
-    color: #667eea;
+    background: #1473E6;
+    color: white;
 }
 
 .btn-primary:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    background: #0D66D0;
 }
 
 .btn-secondary {
     background: transparent;
-    color: white;
-    border: 2px solid white;
+    color: #222222;
+    border: 2px solid #505050;
 }
 
 .btn-secondary:hover {
-    background: white;
-    color: #667eea;
+    border-color: #222222;
+    background: #F4F5F6;
 }
 
 /* Sections */
@@ -176,6 +175,7 @@ section {
 .about-text {
     font-size: 1.1rem;
     line-height: 1.8;
+    text-align: center;
 }
 
 .about-text h3 {
@@ -196,23 +196,24 @@ section {
 }
 
 .skill-category {
-    background: white;
+    background: #FFFFFF;
     padding: 2rem;
-    border-radius: 15px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-    transition: transform 0.3s;
+    border-radius: 4px;
+    border: 1px solid #E1E1E1;
+    transition: box-shadow 0.2s;
 }
 
 .skill-category:hover {
-    transform: translateY(-5px);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
 .skill-category h3 {
-    color: #667eea;
+    color: #222222;
     margin-bottom: 1.5rem;
     display: flex;
     align-items: center;
     gap: 0.5rem;
+    font-size: 1.2rem;
 }
 
 .skill-category h3 i {
@@ -226,12 +227,20 @@ section {
 }
 
 .skill-tag {
-    background: linear-gradient(135deg, #667eea, #764ba2);
-    color: white;
-    padding: 0.5rem 1rem;
-    border-radius: 25px;
-    font-size: 0.9rem;
+    background: #F4F5F6;
+    color: #505050;
+    padding: 4px 12px;
+    border-radius: 4px;
+    font-size: 0.85rem;
     font-weight: 500;
+    border: 1px solid #E1E1E1;
+    transition: all 0.2s ease;
+}
+
+.skill-tag:hover {
+    background: #FFFFFF;
+    border-color: #1473E6;
+    color: #1473E6;
 }
 
 /* Experience Section */
@@ -250,9 +259,9 @@ section {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    width: 3px;
+    width: 2px;
     height: 100%;
-    background: linear-gradient(135deg, #667eea, #764ba2);
+    background: #E1E1E1;
 }
 
 .timeline-item {
@@ -268,11 +277,16 @@ section {
 
 .timeline-content {
     width: 62%;
-    background: #f8f9fa;
-    padding: 2rem;
-    border-radius: 15px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    background: #FFFFFF;
+    padding: 1.5rem;
+    border-radius: 4px;
+    border: 1px solid #E1E1E1;
     position: relative;
+    transition: box-shadow 0.2s;
+}
+
+.timeline-content:hover {
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
 .timeline-content::before {
@@ -281,72 +295,78 @@ section {
     top: 50%;
     width: 0;
     height: 0;
-    border: 15px solid transparent;
+    border: 10px solid transparent;
 }
 
 .timeline-item:nth-child(odd) .timeline-content::before {
-    left: -30px;
-    border-right-color: #f8f9fa;
+    left: -20px;
+    border-right-color: #E1E1E1;
 }
 
 .timeline-item:nth-child(even) .timeline-content::before {
-    right: -30px;
-    border-left-color: #f8f9fa;
+    right: -20px;
+    border-left-color: #E1E1E1;
 }
 
 .timeline-date {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    background: #667eea;
-    color: white;
-    padding: 0.5rem 1rem;
-    border-radius: 25px;
+    background: #FFFFFF;
+    color: #505050;
+    padding: 4px 12px;
+    border-radius: 16px;
     font-weight: 600;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     white-space: nowrap;
+    border: 1px solid #E1E1E1;
 }
 
 .timeline-content h3 {
-    color: #667eea;
+    color: #222222;
     margin-bottom: 0.5rem;
+    font-size: 1.2rem;
 }
 
 .timeline-content h4 {
-    color: #666;
+    color: #1473E6;
     margin-bottom: 1rem;
     font-weight: 500;
+    font-size: 0.95rem;
 }
 
 .timeline-content ul {
     list-style: none;
     padding-left: 0;
+    font-size: 0.9rem;
 }
 
 .timeline-content li {
     margin-bottom: 0.5rem;
-    padding-left: 1.5rem;
+    padding-left: 1.2rem;
     position: relative;
 }
 
 .timeline-content li::before {
-    content: '▶';
-    color: #667eea;
+    content: '•';
+    color: #FA0F00;
     position: absolute;
     left: 0;
+    font-size: 1.2rem;
+    line-height: 1;
 }
 
-/* Awards Section */
 .awards {
-    background: #f8f9fa;
+    background: #FFFFFF;
     text-align: center;
+    border-top: 1px solid #E1E1E1;
 }
 
 .award-card {
-    background: white;
+    background: #F4F5F6;
     padding: 2rem;
-    border-radius: 15px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    border-radius: 4px;
+    border: 1px solid #E1E1E1;
     max-width: 600px;
     margin: 0 auto;
     position: relative;
@@ -359,18 +379,18 @@ section {
     top: 0;
     left: 0;
     right: 0;
-    height: 5px;
-    background: linear-gradient(135deg, #667eea, #764ba2);
+    height: 4px;
+    background: #FA0F00;
 }
 
 .award-icon {
-    font-size: 3rem;
-    color: #ffd700;
+    font-size: 2.5rem;
+    color: #505050;
     margin-bottom: 1rem;
 }
 
 .award-card h3 {
-    color: #667eea;
+    color: #222222;
     margin-bottom: 1rem;
 }
 
@@ -387,15 +407,16 @@ section {
 }
 
 .contact-info {
-    background: linear-gradient(135deg, #667eea, #764ba2);
-    color: white;
+    background: #222222;
+    color: #FFFFFF;
     padding: 2rem;
-    border-radius: 20px;
+    border-radius: 4px;
 }
 
 .contact-info h3 {
     margin-bottom: 2rem;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
+    font-weight: 500;
 }
 
 .contact-item {
@@ -403,6 +424,7 @@ section {
     align-items: center;
     gap: 1rem;
     margin-bottom: 1.5rem;
+    font-size: 0.95rem;
 }
 
 .contact-item i {
@@ -411,9 +433,10 @@ section {
 }
 
 .contact-form {
-    background: #f8f9fa;
-    padding: 1rem;
-    border-radius: 20px;
+    background: #FFFFFF;
+    padding: 1.5rem;
+    border-radius: 4px;
+    border: 1px solid #E1E1E1;
 }
 
 .form-group {
@@ -424,36 +447,44 @@ section {
     display: block;
     margin-bottom: 0.5rem;
     font-weight: 600;
-    color: #333;
+    color: #505050;
+    font-size: 0.85rem;
 }
 
 .form-group input,
 .form-group textarea {
     width: 100%;
-    padding: 1rem;
-    border: 2px solid #e9ecef;
-    border-radius: 10px;
-    font-size: 1rem;
-    transition: border-color 0.3s;
+    padding: 0.75rem;
+    border: 1px solid #E1E1E1;
+    border-radius: 4px;
+    font-size: 0.95rem;
+    transition: border-color 0.2s;
+    background: #F4F5F6;
 }
 
 .form-group input:focus,
 .form-group textarea:focus {
     outline: none;
-    border-color: #667eea;
+    border-color: #1473E6;
+    background: #FFFFFF;
 }
 
 .submit-btn {
-    background: linear-gradient(135deg, #aeb0b9, #764ba2);
+    background: #1473E6;
     color: white;
-    padding: 1rem 2rem;
+    padding: 10px 24px;
     border: none;
-    border-radius: 50px;
-    font-size: 1rem;
+    border-radius: 16px;
+    font-size: 0.9rem;
     font-weight: 600;
     cursor: pointer;
-    transition: transform 0.3s;
+    transition: background-color 0.2s;
     width: 100%;
+}
+
+.submit-btn:hover {
+    background: #0D66D0;
+    transform: none;
 }
 
 /* Section and heading */
@@ -477,25 +508,27 @@ section {
   
   /* Individual card styling */
   .card {
-    flex: 1 1 300px; /* grow, shrink, basis */
-    background-color: #fff;
-    border-radius: 8px;
+    flex: 1 1 300px;
+    background-color: #FFFFFF;
+    border-radius: 4px;
     padding: 20px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* subtle shadow for card effect */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #E1E1E1;
+    transition: box-shadow 0.2s ease;
   }
   .card h3 {
     margin-top: 0;
-    font-size: 1.2em;
+    font-size: 1.1em;
+    color: #222222;
   }
   .card p {
     margin: 8px 0;
+    font-size: 0.9rem;
   }
   
   /* Hover effect for interactivity */
   .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+    transform: none;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   }
   
   /* Responsive: stack cards on small screens */
@@ -516,8 +549,8 @@ section {
 
 /* Footer */
 footer {
-    background: #333;
-    color: white;
+    background: #222222;
+    color: #F4F5F6;
     text-align: center;
     padding: 2rem 0;
 }
@@ -531,20 +564,21 @@ footer {
 
 .social-links a {
     display: inline-flex;
-    width: 50px;
-    height: 50px;
-    background: linear-gradient(135deg, #667eea, #764ba2);
+    width: 40px;
+    height: 40px;
+    background: #505050;
     color: white;
     border-radius: 50%;
     align-items: center;
     justify-content: center;
-    font-size: 1.2rem;
-    transition: transform 0.3s;
+    font-size: 1.1rem;
+    transition: background-color 0.2s;
     text-decoration: none;
 }
 
 .social-links a:hover {
-    transform: translateY(-3px);
+    background: #FA0F00;
+    transform: none;
 }
 
 .footer-sections {
@@ -564,12 +598,12 @@ footer {
 }
 
 .footer-section i {
-    font-size: 1.5rem;
-    color: #667eea;
+    font-size: 1.3rem;
+    color: #E1E1E1;
 }
 
 .footer-section span {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     font-weight: 500;
 }
 
